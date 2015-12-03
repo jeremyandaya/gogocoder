@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GO GO CODER</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bs-superhero.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+</head>
+<body>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">GO GO CODER</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- <div id="container">
+        <div id="draggable" class="ui-widget-content">
+            <p>1</p>
+        </div>
+
+        <div id="droppable" class="ui-widget-header">
+            <p>Drop 1 here</p>
+        </div>
+        <div id="result">
+            <p>0</p>
+        </div>
+        <div id="grade">
+            <p>GRADE</p>
+        </div>
+        <div id="doctype-text">
+            <p>doctype-text</p>
+        </div>
+        <button onclick="myFunction()">Submit</button>
+    </div> -->
+<div class="container" id="container-body">
+<div class="row">
+        <div class="col-md-12">
+
+    <div id="redips-drag">
+      <table id="table1">
+        <colgroup>
+        <col width="100"/>
+        <col width="50"/>
+        <col width="100"/>
+        <col width="100"/>
+        <col width="100"/>
+        <col width="100"/>
+        <col width="100"/>
+    </colgroup>
+    <tr>
+      <td class="dark"><div id="head1-drag" class="redips-drag yellow">&#60;head&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="green_cell" id="doctype-drop"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="html2-drag" class="redips-drag yellow">&#60;/html&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="redips-mark yellow_cell redips-single" data-boolean=false></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="green" class="redips-drag green">&#60;/head&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="yellow_cell" id="head1-drop"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="green" class="redips-drag green">&#60;title&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="redips-mark green_cell redips-single" data-boolean=false></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="green" class="redips-drag green">&#60;/div&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="redips-mark yellow_cell redips-single" data-boolean=false></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="green" class="redips-drag green">&#60;/title&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="redips-mark green_cell redips-single" data-boolean=false></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="yellow" class="redips-drag yellow">&#60;html&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="redips-mark green_cell redips-single" data-boolean=false></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="green" class="redips-drag green">&#60;div&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="redips-mark orange_cell redips-single" data-boolean=false></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="doctype-drag" class="redips-drag green">&#60;!DOCTYPE html&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="redips-mark green_cell redips-single" data-boolean=false></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="orange" class="redips-drag orange">&#60;body&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="redips-mark orange_cell redips-single" data-boolean=false></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="orange" class="redips-drag orange">Content</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="redips-mark green_cell redips-single" data-boolean=false></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="orange" class="redips-drag orange">&#60;/body&#62;</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="redips-mark orange_cell redips-single" data-boolean=false></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <tr>
+      <td class="dark"><div id="yellow" class="redips-drag yellow">Title</div></td>
+      <td class="redips-mark blank"></td>
+      <td class="yellow_cell" id="html2-drop"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+      <td class="dark redips-single" title="Single content cell"></td>
+  </tr>
+  <!-- empty row -->
+  <tr>
+      <td colspan="7" class="redips-mark blank"></td>
+  </tr>
+  <!-- message row -->
+  <tr>
+      <td class="redips-mark blank"></td>
+      <td class="redips-mark blank"></td>
+      <td id="message" colspan="5" class="redips-mark dark2">Set html code respectively.</td>
+  </tr>
+</table>
+</div>
+
+<button onclick="myFunction()" class="btn btn-primary btn-lg">Submit</button>
+</div> <!-- col -->
+</div> <!-- row -->
+</div> <!-- container -->
+<script src="js/script.js"></script>
+</body>
+</html>
+
+
+
